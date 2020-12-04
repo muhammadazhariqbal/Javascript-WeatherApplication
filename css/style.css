@@ -1,0 +1,204 @@
+* {
+    margin: 0rem;
+    padding: 0rem;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #E1E1E1 !important;
+}
+
+/* Start-top-navigation-bar */
+
+#top-navigation-bar {
+    background-color: #E1E1E1 !important;
+    height: 5rem;
+    padding: 15px;
+}
+#loader {
+    display: none;
+}
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 10px;
+    height: 10px;
+  }
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    margin-top: 0.8rem;
+    margin-left: -4rem;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #000000 transparent transparent transparent;
+  }
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+.form-control {
+    outline: none !important;
+    border: none !important;
+    border-radius: 20px !important;
+    background-color: #D4D4D4 !important;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+input[type=text]:focus {
+    border: none !important;
+    outline: none !important;
+}
+
+.form-inline button {
+    margin-left: -5rem;
+    border: none !important;
+    outline: none !important;
+    text-decoration: none;
+    
+}
+.btn {
+    border: none !important;
+    outline: none !important;
+    text-decoration: none;
+}
+.fa-map-marker-alt {
+    font-size: 1.3rem;
+    color: #000000;
+}
+
+.fa-search-location {
+    font-size: 1.3rem;
+    color: #000000;
+}
+
+/* Close-top-navigation-bar */
+
+
+/* Start-main-bg */
+
+
+#main-bg {
+    height: 450px;
+    width: 500px;
+    margin: 20px;
+    background-color: black !important;
+    background: url(../img/morning.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+
+#main-bg h1 {
+    opacity: 0.6;
+    text-align: left;
+    font-family: 'Fredoka One', cursive;
+    font-size: 3rem;
+    letter-spacing: 10px;
+    padding-top: 24rem;
+    margin: 5px;
+}
+#geoLocationError {
+    display: none;
+}
+#cityNameError{
+    display: none;
+}
+h2 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 4rem;
+    color: #fff;
+    text-align: center;
+    
+    margin: 10px;
+}
+
+.box {
+    height: 170px;
+    width: 130px;
+    background-color: #fff;
+    display: flex;
+    float: left;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: block;
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+    border-radius: 7px;
+}
+
+.box img {
+    height: 50px;
+    width: 50px;
+    margin: 2rem;
+    display: block !important;
+    animation: updownanimation infinite 3s forwards;
+}
+
+.temp-box {
+    height: 60px;
+    width: 350px;
+    margin: 5rem;
+    padding: 10px;
+    border-radius: 7px;
+    background-color: #fff;
+    display: flex;
+}
+
+.temp-box p {
+    margin-left: 3rem;
+    font-family: 'Fredoka One', cursive;
+}
+
+#temp-C {
+    font-size: 2rem;
+}
+
+#temp-F {
+    font-size: 2rem;
+}
+
+#time {
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+}
+
+.date h1 {
+    font-size: 1rem;
+    text-align: center;
+    font-family: 'Fredoka One', cursive
+}
+
+h6 {
+    font-family: 'Fredoka One', cursive;
+    margin: 3px;
+    text-align: left;
+}
+
+@keyframes updownanimation {
+    50% {
+        transform: translateY(5px);
+
+    }
+
+    100% {
+        transform: translateY(-5px);
+    }
+}
