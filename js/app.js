@@ -124,10 +124,13 @@ var getUserInputCity=(event)=>{
         // clearing input value
         document.getElementById('userinput').value='';
       })
-      .catch(error=>{
-        document.getElementById('cityNameError').style.display="block";
-        document.getElementById('userinput').value='';
-      })
+     .catch(error=>{
+          alert("Please refresh your page and try again !")
+    // hide loader
+    document.getElementById('loader').style.display="none";
+    document.getElementById("livelocationbtn").style.display="block";
+// clearing input value
+document.getElementById('userinput').value='';})
     
    
     
