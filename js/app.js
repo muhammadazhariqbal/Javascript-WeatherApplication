@@ -1,3 +1,4 @@
+
 // Functions for printing date and time
 
 var showDate = () => {
@@ -32,6 +33,37 @@ setInterval(() => {
      
     // condition for hour
     (getHour < 10) ? document.getElementById('hours').innerHTML = '0' + getHour : document.getElementById('hours').innerHTML = getHour;
+    // conditions for greetings 
+    if(getHour>=6 && getHour<12){
+        document.getElementById('greetings').innerHTML='GOOD MORNING !';
+        document.getElementById('main-bg').style.backgroundImage = "url('../img/morning-blured.jpg')";
+        
+    } else if(getHour>=12 && getHour<18){
+        document.getElementById('greetings').innerHTML='GOOD AFTERNOON!';
+        document.getElementById('main-bg').style.backgroundImage = "url('../img/afternoon-blured.jpg')";
+        document.getElementById('time').style.color="#fff";
+        document.getElementById('date').style.color="#fff";
+      
+    } else if (getHour>=18 && getHour<20) {
+        document.getElementById('greetings').innerHTML='GOOD EVENING !';
+        
+        
+        
+        document.getElementById('main-bg').style.backgroundImage = "url('../img/evening-blured.jpg')";
+        
+       
+    } else if(getHour>=20 || getHour<=6) {
+        document.getElementById('greetings').innerHTML='GOOD NIGHT!';
+        document.getElementById('main-bg').style.backgroundImage = "url('../img/night-blurd.jpg')";
+        document.getElementById('greetings').style.color="#fff"; 
+        
+    }
+    // (getHour >=6 && getHour<12 ) ? document.getElementById('greetings').innerHTML='GOOD MORNING !' :
+    //  (getHour>=12 && getHour<18) ? document.getElementById('greetings').innerHTML='GOOD AFTERNOON!' :
+    //  (getHour>=18 && getHour<20) ? document.getElementById('greetings').innerHTML='GOOD EVENING !' :
+    //  (getHour>=20 && getHour<6) ? document.getElementById('greetings').innerHTML='GOOD NIGHT!' : document.getElementById('greetings').innerHTML='GOOD NIGHT!'
+     
+    
     //getting Minutes using date Method 
     var getMinutes = date.getMinutes();
     //condition for minutes 
@@ -96,44 +128,34 @@ var gettingCurrentLocation=(event)=>{
 var getUserInputCity=(event)=>{
     // preventing default auto fresh
     event.preventDefault();
-    document.getElementById('loader').style.display="block";
-    document.getElementById("livelocationbtn").style.display="none";
-    var userInputCity=document.getElementById('userinput').value;
-      // fetching wheather Details
-      fetch('http://api.weatherstack.com/current?access_key=6dcaec30f23d4af36ed274c4e4aa3e0d&query='+userInputCity)
-      .then(response=>{return response.json()})
-      .then(data=>{
-          
-          console.log(data)
-          var locationnName=data.location.name;
-          document.getElementById("city-name").innerHTML=locationnName;
-          var wheatherDescription=data.current.weather_descriptions[0];
-         document.getElementById('wheather-dis').innerHTML=wheatherDescription;
-          var wheatherWindSpeed=data.current.wind_speed;
-          document.getElementById('wind-speed').innerHTML=wheatherWindSpeed;
-           var wheatherTemperature=data.current.temperature;
-          document.getElementById('temp-C').innerHTML=wheatherTemperature;
-           document.getElementById('temp-F').innerHTML=(wheatherTemperature* 9/5) + 32;
-          
-          var wheatherHumidity=data.current.humidity;
-          document.getElementById('Humidity').innerHTML=wheatherHumidity;
-        
-            // hide loader
-            document.getElementById('loader').style.display="none";
-            document.getElementById("livelocationbtn").style.display="block";
-        // clearing input value
-        document.getElementById('userinput').value='';
-      })
-     .catch(error=>{
-          alert("Please refresh your page and try again !")
-    // hide loader
-    document.getElementById('loader').style.display="none";
-    document.getElementById("livelocationbtn").style.display="block";
-// clearing input value
-document.getElementById('userinput').value='';})
     
+    
+   var userInputCity=document.getElementById('userinput').value;
+   fetch('https://api.openweathermap.org/data/2.5/weather?q='+userInputCity+'&units=metric&appid=32e773e2fe0de1ca58b5261f44ae1cab')
+   .then(response=>{return response.json()})
+   .then(data=>{
+       console.log(data)
+       var cityName=data.name;
+       document.getElementById("city-name").innerHTML=cityName;
+       var wheatherDescription=data.weather[0].main;
+        document.getElementById('wheather-dis').innerHTML=wheatherDescription;
+        var wheatherWindSpeed=data.wind.speed;
+            document.getElementById('wind-speed').innerHTML=wheatherWindSpeed;
+            var wheatherTemperature=data.main.temp;
+            document.getElementById('temp-C').innerHTML=wheatherTemperature;
+            document.getElementById('temp-F').innerHTML=(wheatherTemperature* 9/5) + 32;
+            
+            var wheatherHumidity=data.main.humidity;
+            document.getElementById('Humidity').innerHTML=wheatherHumidity;
+       
+   })
+   .catch(error=>{
+    swal("Invalid City Name","", "error");
+    document.getElementById("city-name").innerHTML="---";
+   })
+   
+
+
    
     
 }
-
-
