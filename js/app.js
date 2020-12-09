@@ -36,7 +36,7 @@ setInterval(() => {
     // conditions for greetings 
     if(getHour>=6 && getHour<12){
         document.getElementById('greetings').innerHTML='GOOD MORNING !';
-        document.getElementById('main-bg').style.backgroundImage = "url('../img/morning-blured.jpg')";
+        document.getElementById('main-bg').style.backgroundImage = "url('./img/morning-blured.jpg')";
         
     } else if(getHour>=12 && getHour<18){
         document.getElementById('greetings').innerHTML='GOOD AFTERNOON!';
