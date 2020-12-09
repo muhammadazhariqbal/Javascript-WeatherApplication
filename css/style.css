@@ -1,17 +1,24 @@
-* {
+/* * {
     margin: 0rem;
     padding: 0rem;
     box-sizing: border-box;
 }
 
 body {
-    background-color: #E1E1E1 !important;
+    background-color: #b1b1b1 !important;
 }
 
+@keyframes loadinganimation {
+    0%{opacity: 0.5;}
+    50%{opacity: 0;}
+    100%{
+        opacity: 0.5;
+    }
+}
 /* Start-top-navigation-bar */
 
 #top-navigation-bar {
-    background-color: #E1E1E1 !important;
+    background-color: #b1b1b1 !important;
     height: 5rem;
     padding: 15px;
 }
@@ -30,8 +37,8 @@ body {
     position: absolute;
     width: 34px;
     height: 34px;
-    margin-top: 0.8rem;
-    margin-left: -4rem;
+    
+    
     border: 5px solid #fff;
     border-radius: 50%;
     animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
@@ -72,7 +79,6 @@ input[type=text]:focus {
     border: none !important;
     outline: none !important;
     text-decoration: none;
-    
 }
 .btn {
     border: none !important;
@@ -96,23 +102,36 @@ input[type=text]:focus {
 
 
 #main-bg {
-    height: 450px;
-    width: 500px;
+    height: 340px;
+    width: 100%;
     margin: 20px;
+    
     background-color: black !important;
-    background: url(../img/morning.jpg);
+    background: url(../img/night-blurd.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-size: cover;
     border-radius: 10px;
+    padding: 20px;
 }
 
 #main-bg h1 {
-    opacity: 0.6;
-    text-align: left;
+ 
+    text-align: center;
     font-family: 'Fredoka One', cursive;
-    font-size: 3rem;
-    letter-spacing: 10px;
-    padding-top: 24rem;
-    margin: 5px;
+    font-size: 2rem;
+    text-align: right;
+    color: #000000;
+ 
+}
+
+#main-bg h3 {
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.5rem;
+    text-align: left;
+    
 }
 #geoLocationError {
     display: none;
@@ -120,25 +139,25 @@ input[type=text]:focus {
 #cityNameError{
     display: none;
 }
+
 h2 {
     font-family: 'Fredoka One', cursive;
-    font-size: 4rem;
-    color: #fff;
-    text-align: center;
-    
-    margin: 10px;
+    letter-spacing: 10px;
+    font-size: 3rem;
+    color: #000000;
+    text-align: right;
+
 }
 
 .box {
-    height: 170px;
-    width: 130px;
+    height: 120px;
+    width: 80%;
     background-color: #fff;
-    display: flex;
-    float: left;
-    margin-left: 2rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    display: block;
+    margin-top: -3rem;
+    margin-left: 35px;
+    margin-right: 35px;
+   box-shadow: 0px 0px 5px #fff;
+    padding: 10px;
     text-align: center;
     font-family: 'Fredoka One', cursive;
     border-radius: 7px;
@@ -147,24 +166,8 @@ h2 {
 .box img {
     height: 50px;
     width: 50px;
-    margin: 2rem;
-    display: block !important;
+    text-align: center;
     animation: updownanimation infinite 3s forwards;
-}
-
-.temp-box {
-    height: 60px;
-    width: 350px;
-    margin: 5rem;
-    padding: 10px;
-    border-radius: 7px;
-    background-color: #fff;
-    display: flex;
-}
-
-.temp-box p {
-    margin-left: 3rem;
-    font-family: 'Fredoka One', cursive;
 }
 
 #temp-C {
