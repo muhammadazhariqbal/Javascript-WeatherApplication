@@ -19,6 +19,7 @@
     </head>
 
     <body>
+      
         <header>
             <div class="container">
                 <div class="row">
@@ -27,12 +28,11 @@
                         <!-- start-top-navigation-bar-section -->
                         <section id="top-navigation-bar">
                             <nav class="navbar navbar-expand-lg navbar-light">
-                                <a class="navbar-brand" href="#"><img src="./img/azhar-weather-logo-color.png"
+                                <a class="navbar-brand" href="index.html"><img src="./img/azhar-weather-logo-color.png"
                                         alt=""></a>
 
                                 <form class="form-inline my-2 my-lg-0 ml-auto">
-                                    <div class="lds-ring" id="loader"><div></div><div></div><div></div><div></div></div>
-                                    <button class="btn my-2 my-sm-0" id="livelocationbtn" onclick="gettingCurrentLocation(event)"><i class="fas fa-map-marker-alt"></i></button>
+                                   
                                     <input class="form-control mr-sm-2" id="userinput" type="search" placeholder="Search by City"
                                         aria-label="Search" required >
                                     <button class="btn my-2 my-sm-0" type="submit" onclick="getUserInputCity(event)"><i
@@ -54,51 +54,70 @@
         <main>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
+                    
                         
                         <section id="main-bg">
+                            <div class="col-md-2">
+                                <h3 id="greetings"></h3>
+                                <div class="lds-ring" id="loader"><div></div><div></div><div></div><div></div></div>
+                                <button class="btn my-2 my-sm-0" id="livelocationbtn" onclick="gettingCurrentLocation(event)"><i class="fas fa-map-marker-alt"></i></button>
+                                
+                            </div>
+                           <div class="col-md-10">
                             
-                        </section>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="alert alert-danger" role="alert" id="geoLocationError">
-                           YOUR BROWSER DOES NOT  SUPPORT GEOLOCATION API.
-                          </div>
-                          <div class="alert alert-danger" role="alert" id="cityNameError">
-                            INVALID CITY NAME
+                         
+                            <h2 id="city-name">Buhadarabad aiya </h2>
+    
+                            <div id="time">
+                                <h1><span id="hours">00</span> : <span id="minutes">00</span> : <span id="seconds">00</span> <span
+                                        id="day-night"></span></h1>
+                            </div>
+                            <div class="date">
+                                <h1><span id="day">-</span> <span id="date">-</span> <span id="month">-</span></h1>
+                            </div>
                            </div>
-                        <h2 id="city-name">---</h2>
+                        </section>
+                    
+                   
 
-                        <div id="time">
-                            <h1><span id="hours">00</span> : <span id="minutes">00</span> : <span id="seconds">00</span> <span
-                                    id="day-night"></span></h1>
-                        </div>
-                        <div class="date">
-                            <h1><span id="day">-</span> <span id="date">-</span> <span id="month">-</span></h1>
-                        </div>
-                        <div class="box">
+                </div>
+                <div class="row">
+                     
+                    <div class="col-md-3">
+                        <div class="box mx-auto">
                             <img src="https:\/\/assets.weatherstack.com\/images\/wsymbols01_png_64\/wsymbol_0006_mist.png"
                                 alt="">
                             <p id="wheather-dis">--</p>
                         </div>
-                        <div class="box">
+                    </div>
+                    <div class="col-md-3">
+                        <div class="box mx-auto" >
 
                             <img src="https://img.icons8.com/pastel-glyph/64/000000/wind--v1.png" />
                             <p>Wind Speed <br><span id="wind-speed">00</span>m/s</p>
-
+   
                         </div>
-                        <div class="box">
-                            <img src="https://img.icons8.com/android/48/000000/humidity.png" />
-                            <p>Humidity <br><span id="Humidity">00</span>%</p>
-                        </div>
-                        <div class="temp-box">
-                            <p>Temp &nbsp; &nbsp; &nbsp;<span id="temp-C">00</span>°C &nbsp;/ <span
-                                    id="temp-F">00</span>°F</p>
-
-                        </div>
-
                     </div>
-
+                    <div class="col-md-3">
+                        
+                     <div class="box mx-auto">
+                        <img src="https://img.icons8.com/android/48/000000/humidity.png" />
+                        <p>Humidity <br><span id="Humidity">00</span>%</p>
+                    </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="box mx-auto">
+                            <p>Temp <br><span id="temp-C">00</span>°C &nbsp;/ <span
+                                    id="temp-F">00</span>°F</p>
+   
+                        </div>
+                    </div>
+                    
+                     
+                   
+                    
+                   
+                  
                 </div>
 
 
@@ -123,6 +142,7 @@
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
             </script>
         <script src="./js/app.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     </body>
 
 </html>
