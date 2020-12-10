@@ -36,26 +36,25 @@ setInterval(() => {
     // conditions for greetings 
     if(getHour>=6 && getHour<12){
         document.getElementById('greetings').innerHTML='GOOD MORNING !';
-        document.getElementById('main-bg').style.backgroundImage = "url('./img/morning-blured.jpg')";
+        document.getElementById('main-bg').style.backgroundImage = "url('../img/morning-blured.jpg')";
         
     } else if(getHour>=12 && getHour<18){
         document.getElementById('greetings').innerHTML='GOOD AFTERNOON!';
-        document.getElementById('main-bg').style.backgroundImage = "url('./img/afternoon-blured.jpg')";
-        document.getElementById('time').style.color="#fff";
-        document.getElementById('date').style.color="#fff";
+        document.getElementById('main-bg').style.backgroundImage = "url('../img/afternoon-blured.jpg')";
+        
       
     } else if (getHour>=18 && getHour<20) {
         document.getElementById('greetings').innerHTML='GOOD EVENING !';
         
         
         
-        document.getElementById('main-bg').style.backgroundImage = "url('./img/evening-blured.jpg')";
+        document.getElementById('main-bg').style.backgroundImage = "url('../img/evening-blured.jpg')";
         
        
     } else if(getHour>=20 || getHour<=6) {
         document.getElementById('greetings').innerHTML='GOOD NIGHT!';
-        document.getElementById('main-bg').style.backgroundImage = "url('./img/night-blurd.jpg')";
-        document.getElementById('greetings').style.color="#fff"; 
+        document.getElementById('main-bg').style.backgroundImage = "url('../img/night-blurd.jpg')";
+        
         
     }
     // (getHour >=6 && getHour<12 ) ? document.getElementById('greetings').innerHTML='GOOD MORNING !' :
