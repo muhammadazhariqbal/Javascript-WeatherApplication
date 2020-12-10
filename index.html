@@ -28,21 +28,25 @@
                         <!-- start-top-navigation-bar-section -->
                         <section id="top-navigation-bar">
                             <nav class="navbar navbar-expand-lg navbar-light">
-                                <a class="navbar-brand" href="index.html"><img src="./img/azhar-weather-logo-color.png"
-                                        alt=""></a>
-
-                                <form class="form-inline my-2 my-lg-0 ml-auto">
+                                <a class="navbar-brand" href="#"><img src="./img/azhar-weather-logo-color.png" alt=""></a>
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                  <i class="fas fa-bars"></i>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarNav">
+                                  
+                                        <form class="form-inline my-2 my-lg-0 ml-auto">
                                    
-                                    <input class="form-control mr-sm-2" id="userinput" type="search" placeholder="Search by City"
-                                        aria-label="Search" required >
-                                    <button class="btn my-2 my-sm-0" type="submit" onclick="getUserInputCity(event)"><i
-                                            class="fas fa-search-location"></i></button>
-
-                                </form>
-
-
-                            </nav>
+                                            <input class="form-control mr-sm-2" id="userinput" type="search" placeholder="Search by City"
+                                                aria-label="Search" required >
+                                            <button class="btn my-2 my-sm-0" type="submit" onclick="getUserInputCity(event)"><i
+                                                    class="fas fa-search-location"></i></button>
+                
+                                        </form>
+                                    
+                                </div>
+                              </nav>
                         </section>
+                       
                         <!-- Close-top-navigation-bar-section -->
                     </div>
                 </div>
@@ -66,7 +70,7 @@
                            <div class="col-md-10">
                             
                          
-                            <h2 id="city-name"></h2>
+                            <h2 id="city-name">Buhadarabad aiya </h2>
     
                             <div id="time">
                                 <h1><span id="hours">00</span> : <span id="minutes">00</span> : <span id="seconds">00</span> <span
