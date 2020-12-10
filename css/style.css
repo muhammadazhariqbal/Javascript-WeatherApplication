@@ -1,11 +1,11 @@
-*{
+* {
     margin: 0rem;
     padding: 0rem;
     box-sizing: border-box;
 }
 
 body {
-    background-color: #b1b1b1 !important;
+    background-color: #0e0e0e !important;
 }
 
 @keyframes loadinganimation {
@@ -18,9 +18,15 @@ body {
 /* Start-top-navigation-bar */
 
 #top-navigation-bar {
-    background-color: #b1b1b1 !important;
-    height: 5rem;
-    padding: 15px;
+    background-color: #0e0e0e !important;
+    height: auto;
+    display: block;
+}
+.fa-bars {
+    outline: none !important;
+    border: none !important;
+    color: #fff;
+    font-size: 2rem;
 }
 #loader {
     display: none;
@@ -105,7 +111,7 @@ input[type=text]:focus {
     height: 340px;
     width: 100%;
     margin: 20px;
-    
+    color: #fff;
     background-color: black !important;
     background: url(../img/night-blurd.jpg);
     background-attachment: fixed;
@@ -122,7 +128,7 @@ input[type=text]:focus {
     font-family: 'Fredoka One', cursive;
     font-size: 2rem;
     text-align: right;
-    color: #000000;
+    
  
 }
 
@@ -133,18 +139,13 @@ input[type=text]:focus {
     text-align: left;
     
 }
-#geoLocationError {
-    display: none;
-}
-#cityNameError{
-    display: none;
-}
+
 
 h2 {
     font-family: 'Fredoka One', cursive;
     letter-spacing: 10px;
     font-size: 3rem;
-    color: #000000;
+ 
     text-align: right;
 
 }
@@ -152,15 +153,16 @@ h2 {
 .box {
     height: 120px;
     width: 80%;
-    background-color: #fff;
-    margin-top: -3rem;
+    background-color: #1f1f1f !important;
+    margin-top: 2rem;
     margin-left: 35px;
     margin-right: 35px;
-   box-shadow: 0px 0px 5px #fff;
+   box-shadow: 0px 0px 5px #1f1f1f;
     padding: 10px;
     text-align: center;
     font-family: 'Fredoka One', cursive;
     border-radius: 7px;
+    color: #fff;
 }
 
 .box img {
@@ -168,6 +170,7 @@ h2 {
     width: 50px;
     text-align: center;
     animation: updownanimation infinite 3s forwards;
+   
 }
 
 #temp-C {
@@ -204,4 +207,7 @@ h6 {
     100% {
         transform: translateY(-5px);
     }
+}
+#greetings {
+    color: #fff;
 }
